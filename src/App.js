@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
+import "bootstrap/dist/css/bootstrap.min.css"
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Appointment from './pages/Appointment'
+import Announcement from './pages/Announcement'
+import Complain from './pages/Complain'
+import Default from './components/Default'
+import Sidebar from './components/Sidebar'
+
 import './App.css';
 
+
 function App() {
+
+  const [isOpen, setisOpen] = useState(false)
+  const toggleSidebar = ()=>{
+    setisOpen(!isOpen)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar toggleSidebar = {toggleSidebar}/>
+      <Sidebar isOpen={isOpen} toggleSidebar = {toggleSidebar}/>
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/appointment" exact component={Appointment}/>
+        <Route path="/announcement" exact component={Announcement}/>
+        <Route path="/complain" exact component={Complain}/>
+        <Route exact component={Default}/>
+      </Switch>
+    </Router>
   );
 }
 

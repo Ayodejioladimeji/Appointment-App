@@ -1,0 +1,88 @@
+/*
+===============
+THE SECTION OF THE FOOTER
+===============
+*/
+.footer {
+  height: 9rem;
+  background:var(--clr-primary);
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.footer h4 {
+  margin-top: 0.5rem;
+  color: var(--clr-white);
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family:monospace;
+}
+
+.footer h4 span {
+  color: var(--clr-primary-5);
+}
+
+.footer h3{
+    color:var(--clr-primary);
+    text-shadow:3px 3px var(--clr-white);
+}
+
+.layo{
+    color:var(--clr-lemon);
+    font-family:Tahoma;
+}
+
+
+
+/* 
+========================================
+THE SECTION OF THE RESPONSIVENESS
+========================================
+*/
+@media screen and (max-width:320px){
+    
+    .footer h4 {
+        font-size:12px;
+    }
+
+    .footer h3{
+        font-size:15px;
+    }
+
+    .footer small{
+        font-size:13px;
+    }
+}
+
+
+@media screen and (max-width:375px) and (min-width:321px){
+    
+    .footer h4 {
+        font-size:15px;
+    }
+
+    .footer h3{
+        font-size:17px;
+    }
+
+    .footer small{
+        font-size:15px;
+    }
+}
+
+
+@media screen and (max-width:425px) and (min-width:376px){
+    
+    .footer h4 {
+        font-size:18px;
+    }
+
+    .footer h3{
+        font-size:18px;
+    }
+
+    .footer small{
+        font-size:17px;
+    }
+}
