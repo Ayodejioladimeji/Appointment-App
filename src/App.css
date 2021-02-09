@@ -7,6 +7,7 @@
 @import './styles/Section.css';
 @import './styles/Aside.css';
 @import './styles/Footer.css';
+@import './styles/About.css';
 
 
 
@@ -80,7 +81,7 @@ a{
 .underline {
   width: 5rem;
   height: 0.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.25rem;
   background:#00ff00;
   margin-left: auto;
   margin-right: auto;
@@ -91,9 +92,9 @@ a{
 
 /* THE SECTION TITLE */
 .section-title {
-  margin-bottom: 4rem;
+  margin:3rem 2.5rem 0 2.5rem;
   text-align: center;
-  color: var(--clr-primary-5);
+  color: var(--clr-primary);
 }
 
 .section-title h2{

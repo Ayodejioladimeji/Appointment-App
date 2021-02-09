@@ -30,6 +30,12 @@ THE SECTION OF THE NAVIGATIONAL BAR
   align-items: center;
 }
 
+.nav-header img{
+  height:50px;
+  width:50px;
+  object-fit: cover;
+}
+
 .toggle-btn {
   font-size: 2rem;
   border-color: transparent;
@@ -38,7 +44,6 @@ THE SECTION OF THE NAVIGATIONAL BAR
   cursor: pointer;
   transition: var(--transition);
   outline:none;
-  margin-bottom:10px;
 }
 
 .toggle-btn:hover {
@@ -59,7 +64,7 @@ THE SECTION OF THE NAVIGATIONAL BAR
   padding: 10px !important;
   border-radius: var(--radius);
 }
-
+ 
 
 
 /* THE SECTION OF THE MEDIA QUERY FROM 768PX UPWARD */

@@ -11,11 +11,13 @@ import four from '../images/section4.png'
 import five from '../images/section5.png'
 import Aside from './../components/Aside';
 import Footer from './../components/Footer';
+import Title from './../components/Title';
 
 const Home = () => {
     return (
         <div>
             <Hero/>
+            <Title title="Daily Agenda"/>
             <Services/>
             <Section text="Are you experiencing educational, vocational, career or personal/social problem? consult the counsellor" button="Book Appointment" img={one}/>
             <Aside text="You are in safe Hands, Bare your mind to the counsellor,He can help you with your problems" button="Get Intouch" img={two}/>
