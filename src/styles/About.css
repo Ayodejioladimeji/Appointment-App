@@ -1,0 +1,140 @@
+
+/*
+===============
+About Page
+===============
+*/
+.about-page {
+    padding: 7rem 0;
+    background:var(--clr-tetiary);
+    height:100vh;
+  }
+  
+  .about-img {
+    /* margin-bottom: 2rem; */
+    height: 30rem;
+    border-left:15px solid var(--clr-primary);
+    border-top:15px solid var(--clr-primary);
+  }
+
+  .div{
+    margin-top:-20px;
+    /* background:var(--clr-primary); */
+  }
+  
+  .div h2{
+    color:var(--clr-primary);
+    font-family:'rye', cursive;
+    padding-left:10px;
+  }
+  .div h5{
+    color:var(--clr-primary);
+    font-family:'rye', cursive;
+    padding-left:10px;
+  }
+  
+  .about-center{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  
+  .about-text .section-title {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .about-text .underline {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .about-text p {
+    line-height: 2;
+    color:#888;
+  }
+  
+ 
+  @media screen and (min-width: 992px) {
+    .about-center {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: center;
+      column-gap: 4rem;
+    }
+    .about-img {
+      margin-top:50px;
+      grid-column: 1 / span 5;
+      margin-bottom: 0;
+    }
+    .about-text {
+      grid-column: 3 / -1;
+    }
+  }
+  
+
+
+  /* 
+  ========================================
+  THE SECTION OF THE RESPONSIVENESS
+  ==========================================
+  */
+  @media screen and (max-width:320px){
+    .about-page {
+      padding:0;
+      }
+  
+    .about-img {
+    margin-top:120px;
+    margin-bottom:0.5rem;
+    height: 23rem;
+    width:18rem;
+    border:none;
+    object-fit: cover;
+    }
+
+  }
+
+
+  @media screen and (max-width:375px) and (min-width:321px){
+    .about-page {
+      padding:0;
+      }
+  
+    .about-img {
+    margin-top:120px;
+    margin-bottom:0.5rem;
+    height: 30rem;
+    width:21rem;
+    border:none;
+    object-fit: cover;
+    }
+
+    .div h5{
+      font-size:19px;
+    }
+
+  }
+
+
+  @media screen and (max-width:425px) and (min-width:376px){
+    .about-page {
+      padding:0;
+      }
+  
+    .about-img {
+    margin-top:120px;
+    margin-bottom:0.5rem;
+    height: 34rem;
+    width:23rem;
+    border:none;
+    object-fit: cover;
+    }
+
+    .div h5{
+      font-size:19px;
+    }
+
+  }
+
+

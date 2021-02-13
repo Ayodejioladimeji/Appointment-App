@@ -1,0 +1,183 @@
+
+.one{
+    background:var(--clr-secondary);
+}
+
+.one-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1570px;
+    display: grid;
+  }
+
+  .left{
+      display:flex;
+      font-family:'Rye', cursive;
+      padding:80px 30px;
+      color:var(--clr-primary);
+  }
+
+  .right{
+    padding:80px 0;
+    /* text-align:center; */
+  }
+
+  .right img{
+      width:500px;
+      height:400px;
+      object-fit: contain;
+  }
+
+
+  @media screen and (min-width:1244px){
+      .one-center{
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .left{
+        justify-content: space-around;
+        align-items:center;
+          padding:0 80px;
+      }
+  }
+
+
+  @media screen and (min-width:992px) and (max-width:1243px){
+      .one-center{
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .left{
+        justify-content: space-around;
+        align-items:center; 
+        padding:0 30px;
+      }
+      .left h2{
+          font-size:28px;
+      }
+
+      .right{
+          text-align:center;
+      }
+
+      .right img{
+          width:400px;
+          height:350px;
+      }
+  }
+
+
+@media screen and (max-width:993px){
+  .one-center{
+      width:100%;
+  }
+
+  .left{
+      display:flex;
+      order:1;
+      padding:80px 30px 0 30px;
+  }
+  .left h2{
+      font-size:25px;
+  }
+
+  .right{
+      display:flex;
+      order:2;
+      padding:30px;
+  }
+
+}
+
+
+@media screen and (max-width:550px){
+  .right img{
+      width:370px;
+      height:350px;
+  }
+}
+
+
+
+/* 
+========================================
+THE SECTION OF THE RESPONSIVENESS
+===========================================
+*/
+
+@media screen and (max-width:320px){
+
+  .left h2{
+      font-size:20px;
+  }
+
+  .right{
+    text-align:center;
+  }
+
+  .right img{
+    width:240px;
+    height:250px;
+  }
+
+  .btn{
+    padding: 0.8rem 0.65rem;
+    font-size: 0.675rem;
+    margin-top:10px;
+  }
+}
+
+
+@media screen and (max-width:375px) and (min-width:321px){
+  .left{
+    padding:80px 18px 0 30px;
+  }
+
+  .left h2{
+      font-size:20px;
+  }
+
+  .right{
+    text-align:center;
+  }
+
+  .right img{
+    width:300px;
+    height:270px;
+  }
+
+  .btn{
+    padding: 0.8rem 0.65rem;
+    font-size: 0.675rem;
+    margin-top:10px;
+  }
+}
+
+
+@media screen and (max-width:425px) and (min-width:376px){
+  .left{
+    padding:80px 18px 0 30px;
+  }
+
+  .left h2{
+      font-size:20px;
+  }
+
+  .right{
+    text-align:center;
+  }
+
+  .right img{
+    width:330px;
+    height:300px;
+  }
+
+  .btn{
+    padding: 0.8rem 0.65rem;
+    font-size: 0.675rem;
+    margin-top:10px;
+  }
+}
+
+
+

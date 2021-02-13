@@ -1,0 +1,72 @@
+
+.appointment{
+    position:relative;
+    padding-bottom:30px;
+}
+
+.appointment-center{
+    background:#bfdabf81;
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+    padding:0px;
+    border-radius: 5px;
+    width:95%;
+    margin:0 auto;
+}
+
+.appointment-image{
+    object-fit: cover;
+    border-radius:0 0 0 25px;
+    height:100%;
+    width:100%;
+}
+
+label{
+    color:var(--clr-primary);
+    margin-bottom:0;
+}
+
+.form-control{
+    resize: none !important;   
+    height:40px;
+    width:100%;
+    border:1px solid var(--clr-primary);
+    color:var(--clr-primary)!important;
+}
+
+
+.input:hover{
+    box-shadow: inset 0 -1px 0 #ddd;
+    border:1px solid green;
+}
+
+textarea:focus, 
+button.focus,
+textarea.form-control:focus, 
+input.form-control:focus, 
+select.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[type=submit].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+
+
+/* THE SECTION OF THE MEDIA QUERY */
+@media screen and (min-width:768px){
+    .appointment-center{
+        top:150px;
+        width:80%;
+        padding:30px;
+    }
+}

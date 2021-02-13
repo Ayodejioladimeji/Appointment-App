@@ -1,0 +1,38 @@
+
+.login-heading{
+    color:var(--clr-primary);
+    font-family:"rye", cursive;
+}
+
+.login{
+    position:relative;
+    height:100vh;
+}
+
+.login-center{
+    background:#bfdabf81;
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+    padding:30px;
+    border-radius: 5px;
+    width:95%;
+    margin:0 auto;
+}
+
+.signin{
+    color:var(--clr-primary);
+    text-decoration:none!important;
+    margin-top:55px!important;
+    
+}
+
+
+/* THE SECTION OF THE RESPONSIVENESS */
+@media screen and (min-width:768px){
+    .login-center{
+        width:80%;
+        top:150px;
+    }
+}

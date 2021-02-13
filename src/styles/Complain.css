@@ -1,0 +1,33 @@
+
+.complain{
+    position:relative;
+}
+
+.complain-center{
+    background:#bfdabf81;
+    position: absolute;
+    top:100px;
+    left:0;
+    right:0;
+    padding:0px;
+    border-radius: 5px;
+    width:95%;
+    margin:0 auto;
+}
+
+.complain-image{
+    object-fit: cover;
+    border-radius:0 0 0 25px;
+    height:100%;
+    width:100%;
+}
+
+
+/* THE SECTION OF THE MEDIA QUERY */
+@media screen and (min-width:768px){
+    .complain-center{
+        top:150px;
+        width:80%;
+        padding:30px;
+    }
+}
