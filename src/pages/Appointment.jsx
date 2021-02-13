@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
-import { Particles } from 'react-particles-js';
 import office from '../images/office.svg'
 
 // import M from 'materialize-css'
@@ -62,6 +61,7 @@ const Appoinment = () => {
                 console.log(err)
             })
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[url])
 
     // THE SECTION OF THE POSTING OF APPOINTMENT
