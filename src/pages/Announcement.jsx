@@ -4,6 +4,22 @@ const Announcement = () => {
     return (
         <div>
             welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+            welcome to the announcement page
+
         </div>
     )
 }

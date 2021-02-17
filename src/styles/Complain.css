@@ -1,6 +1,7 @@
 
 .complain{
     position:relative;
+    padding-bottom:30px;
 }
 
 .complain-center{
@@ -13,6 +14,7 @@
     border-radius: 5px;
     width:95%;
     margin:0 auto;
+    padding-bottom:50px;
 }
 
 .complain-image{
@@ -23,10 +25,21 @@
 }
 
 
+
 /* THE SECTION OF THE MEDIA QUERY */
 @media screen and (min-width:768px){
     .complain-center{
-        top:150px;
+        top:130px;
+        width:90%;
+        padding:30px;
+        padding-bottom:80px;
+    }
+}
+
+/* THE SECTION OF THE MEDIA QUERY */
+@media screen and (min-width:1200px){
+    .complain-center{
+        top:130px;
         width:80%;
         padding:30px;
     }

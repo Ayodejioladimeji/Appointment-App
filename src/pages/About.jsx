@@ -22,7 +22,7 @@ const About = () => {
                   <p data-aos="flip-right">{info}</p>
                 </article> 
               </>
-            )
+            ) 
           })}
         </div>
       </section> 

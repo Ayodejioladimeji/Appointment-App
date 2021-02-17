@@ -16,15 +16,15 @@ import Title from './../components/Title';
 const Home = () => {
     return (
         <div>
-            <Hero/>
-            <Title title="Daily Agenda"/>
-            <Services/>
-            <Section text="Are you experiencing educational, vocational, career or personal/social problem? consult the counsellor" button="Book Appointment" img={one}/>
-            <Aside text="You are in safe Hands, Bare your mind to the counsellor,He can help you with your problems" button="Get Intouch" img={two}/>
-            <Section text="A problem shared is half-solved, share your problems with the counsellor" button="Book Appointment" img={three}/>
-            <Aside text="Are you experiencing challenges on your studies ? contact the counsellor" button="Get Intouch" img={four}/>
-            <Section text="Confidential is our watchword, keep our secret SECRET Reach out to your counsellor" button="Book Appointment" img={five}/>
-            <Footer/>
+            <Hero />
+            <Title title="Daily Agenda" />
+            <Services />
+            <Section text="Are you experiencing educational, vocational, career or personal/social problem? consult the counsellor" button="Book Appointment" img={one} />
+            <Aside text="You are in safe Hands, Bare your mind to the counsellor,He can help you with your problems" button="Get Intouch" img={two} />
+            <Section text="A problem shared is half-solved, share your problems with the counsellor" button="Book Appointment" img={three} />
+            <Aside text="Are you experiencing challenges on your studies ? contact the counsellor" button="Get Intouch" img={four} />
+            <Section text="Confidential is our watchword, keep our secret a SECRET  - Reach out to your counsellor" button="Book Appointment" img={five} />
+            <Footer />
         </div>
     )
 }

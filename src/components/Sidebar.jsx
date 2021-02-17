@@ -8,7 +8,7 @@ import '../styles/Sidebar.css'
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <aside className={`sidebar ${isOpen ? "show-sidebar" : ""} `}>
+    <aside className={`sidebar ${isOpen ? "show-sidebar" : ""} `} onClick={toggleSidebar}>
       <button className="close-btn" onClick={toggleSidebar}>
         <FaTimesCircle />
       </button>
@@ -22,3 +22,4 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 }
 
 export default Sidebar
+

@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react'
-import {useHistory} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import office from '../images/office.svg'
 
 // import M from 'materialize-css'
@@ -27,108 +27,107 @@ const Appoinment = () => {
 
 
     // DECLARING THE USE EFFECT
-    useEffect(()=>{
-        if(url){
-            fetch("/createpost",{
+    useEffect(() => {
+        if (url) {
+            fetch("/createpost", {
                 method: "post",
-                headers:{
-                    "Content-Type":"application/json"
-                    // "Authorization" : "Bearer "+localStorage.getItem('jwt')
+                headers: {
+                    "Content-Type": "application/json"
                 },
-                body:JSON.stringify({
+
+                body: JSON.stringify({
                     firstname,
                     lastname,
                     department,
                     matric,
                     time,
                     level,
-                    photo:url,
+                    photo: url,
                     message
                 })
             })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.error){
-                    toast.error(data.error)
-                }
-                else{
-                   toast.success("Appointment successful");
-                   alert("Appointment Successful")
-                    history.push("/")
-                }
-            })
-            .catch(err=>{
-                console.log(err)
-            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.error) {
+                        return toast.error(data.error)
+                    }
+                    else {
+                        toast("Appointment successful");
+                        history.push("/")
+                    }
+                })
+                .catch(err => {
+                    console.log(err)
+                })
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[url])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [url])
 
     // THE SECTION OF THE POSTING OF APPOINTMENT
-    const postDetails = ()=>{
+    const postDetails = () => {
         const data = new FormData()
         data.append("file", photo)
         data.append("upload_preset", "mr-adeyinka")
         data.append("cloud_name", "Sourcecode")
         fetch("https://api.cloudinary.com/v1_1/devsource/image/upload", {
             method: "post",
-            body:data
+            body: data
         })
-        .then(res=>res.json())
-        .then(data=>{
-           if(data.error){
-               toast.error("The inputs cannot be empty")
-           }else{
-            setUrl(data.url)
-           }
-        })
-        .catch(err=>{
-            console.log(err)
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error) {
+                    toast.error("The inputs cannot be empty")
+                } else {
+                    setUrl(data.url)
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     return (
         <>
             <div className="appointment">
-                <ToastContainer/>
-                <Particle/>
+                <ToastContainer />
+                <Particle />
                 <div className="appointment-center">
-                <div className="container">
+                    <div className="container">
                         <div className="row">
-                        <div className="col-xl-5 col-md-12 col-sm-12 col-xs-12">
-                            <img src={office} alt="" className="appointment-image"/>
-                        </div>
+                            <div className="col-xl-5 col-md-12 col-sm-12 col-xs-12">
+                                <img src={office} alt="" className="appointment-image" />
+                            </div>
 
-                        <div className="col-xl-7 col-md-12 col-sm-12 col-xs-12 px-4">
+                            <div className="col-xl-7 col-md-12 col-sm-12 col-xs-12 px-4">
                                 <form>
                                     <div className="form-row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="firstname">FirstName</label>
-                                            <input type="text" className="form-control" id="firstname" placeholder="input your firstname" value={firstname} onChange={(e)=>setFirstname(e.target.value)}/>
+                                            <input type="text" className="form-control" id="firstname" placeholder="input your firstname" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
                                         </div>
 
                                         <div className="form-group col-md-6">
                                             <label htmlFor="lastname">LastName</label>
-                                            <input type="text" className="form-control" id="lastname" placeholder="input your lastname" value={lastname} onChange={(e)=>setLastname(e.target.value)}/>
+                                            <input type="text" className="form-control" id="lastname" placeholder="input your lastname" value={lastname} onChange={(e) => setLastname(e.target.value)} />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="dept">Department</label>
-                                            <input type="text" className="form-control" id="dept" placeholder="input your department" value={department} onChange={(e)=>setDepartment(e.target.value)}/>
+                                            <input type="text" className="form-control" id="dept" placeholder="input your department" value={department} onChange={(e) => setDepartment(e.target.value)} />
                                         </div>
 
                                         <div className="form-group col-md-6">
                                             <label htmlFor="matric">Matric No</label>
-                                            <input type="text" className="form-control" id="matric" placeholder="input your matric no" value={matric} onChange={(e)=>setMatric(e.target.value)}/>
+                                            <input type="text" className="form-control" id="matric" placeholder="input your matric no" value={matric} onChange={(e) => setMatric(e.target.value)} />
                                         </div>
                                     </div>
 
                                     <div className="form-row">
                                         <div className="form-group col-md-4">
                                             <label htmlFor="time">Time Schedule</label>
-                                            <select id="time" className="form-control" value={time} onChange={(e)=>setTime(e.target.value)}>
+                                            <select id="time" className="form-control" value={time} onChange={(e) => setTime(e.target.value)}>
                                                 <option defaultValue>Choose Time</option>
                                                 <option>9:00am - 9:20am</option>
                                                 <option>9:20am - 9:40am</option>
@@ -156,7 +155,7 @@ const Appoinment = () => {
 
                                         <div className="form-group col-md-4">
                                             <label htmlFor="level">Level</label>
-                                            <select id="level" className="form-control" value={level} onChange={(e)=>setLevel(e.target.value)}>
+                                            <select id="level" className="form-control" value={level} onChange={(e) => setLevel(e.target.value)}>
                                                 <option defaultValue>Choose Level</option>
                                                 <option>100L</option>
                                                 <option>200L</option>
@@ -165,26 +164,26 @@ const Appoinment = () => {
                                                 <option>500L</option>
                                                 <option>600L</option>
                                                 <option>700L</option>
-                                                
+
                                             </select>
                                         </div>
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="image">Upload Image</label>
-                                        <input type="file" className="form-control-file" id="image" onChange={(e)=>setPhoto(e.target.files[0])}/>
+                                        <input type="file" className="form-control-file" id="image" onChange={(e) => setPhoto(e.target.files[0])} />
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="exampleFormControlTextarea1">Write Message</label>
-                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e)=>setMessage(e.target.value)}/>
+                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={message} onChange={(e) => setMessage(e.target.value)} />
                                     </div>
 
-                                    <button type="submit" onClick={(e)=>postDetails(e.preventDefault())} className="btn btn-block btn-outline-success">BOOK APPOINTMENT</button>
+                                    <button type="submit" onClick={(e) => postDetails(e.preventDefault())} className="btn btn-block btn-outline-success">BOOK APPOINTMENT</button>
                                 </form>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </>
