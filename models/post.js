@@ -44,6 +44,8 @@ const postSchema = new mongoose.Schema({
         maxlength: 50
     },
 
+}, {
+    timestamps: true
 })
 
 

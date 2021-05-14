@@ -89,6 +89,28 @@ router.post('/complain', (req, res) => {
 })
 
 
+// THE SECTION OF THE COMMENT
+router.put('/comment', (res, req) => {
+
+    // console.log(req.body)
+    Comp.findByIdAndUpdate(req.body, {
+        $push: { comments: comment }
+    }, {
+        new: true
+    })
+        .populate("comments.postBy", "_id")
+        .populate("postedBy", "_id")
+        .exec((err, result) => {
+            if (err) {
+                return res.status(422).json({ error: err })
+            }
+            else {
+                res.json(result)
+            }
+        })
+})
+
+
 // THE SECTION OF THE APPOINTMENT
 router.post('/createpost', (req, res) => {
 
